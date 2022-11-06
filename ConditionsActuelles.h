@@ -1,0 +1,10 @@
+#ifndef METEO_CONDITIONSACTUELLES_H
+#define METEO_CONDITIONSACTUELLES_H
+
+
+class ConditionsActuelles {
+
+};
+
+
+#endif //METEO_CONDITIONSACTUELLES_H
