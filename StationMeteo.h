@@ -3,8 +3,9 @@
 
 #include <iostream>
 #include "IObserver.h"
+#include "ISubject.h"
 
-class StationMeteo {
+class StationMeteo : public ISubject{
 private :
     int pression;
     double temperature;
@@ -15,8 +16,8 @@ private :
     std::string apercu;
 public :
     StationMeteo();
-    void add(IObserver);
-    void remove(IObserver);
+    void add(IObserver*);
+    void remove(IObserver*);
     void notify();
 
     int getPression();
