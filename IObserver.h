@@ -2,9 +2,11 @@
 #define METEO_IOBSERVER_H
 
 
+#include "ISubject.h"
+
 class IObserver {
 public :
-    virtual void update() = 0;
+    virtual void update(ISubject*) = 0;
 };
 
 

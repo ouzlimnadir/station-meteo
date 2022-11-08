@@ -7,6 +7,7 @@
 
 class StationMeteo : public ISubject{
 private :
+    std::list<IObserver *> list_observer;
     int pression;
     double temperature;
     double humidite;
@@ -15,18 +16,27 @@ private :
     std::string ventDirection;
     std::string apercu;
 public :
-    StationMeteo();
     void add(IObserver*);
     void remove(IObserver*);
     void notify();
+    void listener();
 
-    int getPression();
-    double getTemperature();
-    double getHumidite();
-    int getPrecipitation();
-    double getVent();
-    std::string getVentDirection();
-    std::string getApercu();
+    int getPression() const;
+    double getTemperature() const;
+    double getHumidite() const;
+    int getPrecipitation() const;
+    double getVent() const;
+    const std::string &getVentDirection() const;
+    const std::string &getApercu() const;
+
+    void setPression(int pression);
+    void setTemperature(double temperature);
+    void setHumidite(double humidite);
+    void setPrecipitation(int precipitation);
+    void setVent(double vent);
+    void setVentDirection(const std::string &ventDirection);
+    void setApercu(const std::string &apercu);
+
 };
 
 

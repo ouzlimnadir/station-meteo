@@ -6,11 +6,9 @@
 #include <list>
 
 class ISubject{
-protected :
-    std::list<IObserver *> list_observer;
 public :
-    virtual void add(IObserver*) = 0;
-    virtual void remove(IObserver*) = 0;
+    virtual void add(IObserver*);
+    virtual void remove(IObserver*);
     virtual void notify() = 0;
 };
 
